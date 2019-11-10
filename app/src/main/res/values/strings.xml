@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">Androidfinal_aptech_api</string>
+    <string name="newInvoice">New Invoice</string>
+    <string name="search">Search</string>
+    <string name="inputSearch">Input to search</string>
+    <string name="name_Label">Name: </string>
+    <string name="status_Label">Status: </string>
+    <string name="payment_Label">Payment: </string>
+    <string name="created_date_Label">Create Date: </string>
+    <string name="title_activity_add">AddActivity</string>
+    <string name="title_activity_to_detail">ToDetailActivity</string>
+    <string name="back">Back to menu</string>
+    <string name="cancel">Cancel</string>
+    <string name="save">Save</string>
+    <string name="edit">Edit</string>
+    <string name="delete">Delete</string>
+    <string name="detailScreen">Detail Invoice</string>
+    <string name="mainScreen">Dashboard</string>
+</resources>
