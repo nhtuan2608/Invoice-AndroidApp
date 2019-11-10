@@ -24,4 +24,7 @@ public interface InvoiceService {
 
     @DELETE("invoices/delete/{id}")
     Call<Void> delete(@Path("id") int id);
+
+    @GET("invoices/search/{keyword}/{year}/{month}")
+    Call<List<Invoice>> search(@Path("keyword") String keyword,@Path("year") String year,@Path("month") String month);
 }

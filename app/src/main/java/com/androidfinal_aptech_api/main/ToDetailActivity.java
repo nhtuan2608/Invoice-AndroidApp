@@ -89,14 +89,16 @@ public class ToDetailActivity extends AppCompatActivity {
     private void menuDeleteSelected(MenuItem item) {
         InvoiceService invoiceService = APIClient.getClient().create(InvoiceService.class);
         invoiceService.delete(invoice.getId()).enqueue(new Callback<Void>() {
-            String notice = "Deleted - " + invoice.getId() + ", " + invoice.getName();
+            String notice = "Deleted [ "+ invoice.getName() + ", "
+                                        + invoice.getPayment() + ", "
+                                        + invoice.getStatus() + ", "
+                                        + invoice.getCreatedDate() +" ]";
             @Override
             public void onResponse(Call<Void> call, Response<Void> response) {
                 if(response.isSuccessful()) {
-                    System.out.println(notice);
                     Intent intent = new Intent(ToDetailActivity.this,MainActivity.class);
                     startActivity(intent);
-                    Toast.makeText(getApplicationContext(),notice,Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getApplicationContext(),notice,Toast.LENGTH_LONG).show();
                 }
             }
 

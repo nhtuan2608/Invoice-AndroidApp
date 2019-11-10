@@ -4,7 +4,6 @@ import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
 
-import com.androidfinal_aptech_api.main.com.androidfinal_aptech_api.adapter.DateContainer;
 import com.androidfinal_aptech_api.main.com.androidfinal_aptech_api.entities.Invoice;
 import com.androidfinal_aptech_api.main.com.androidfinal_aptech_api.services.APIClient;
 import com.androidfinal_aptech_api.main.com.androidfinal_aptech_api.services.InvoiceService;
@@ -98,30 +97,19 @@ public class AddActivity extends AppCompatActivity {
 
 
 //        SimpleDateFormat DATE_FORMAT = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss'Z'");
-        String DATE_FORMAT = "yyyy-MM-dd'T'HH:mm:ss.SSS";
+//        String DATE_FORMAT = "yyyy-MM-dd'T'HH:mm:ss.SSS";
 
+        String DATE_FORMAT = "yyyy-MM-dd HH:mm:ss";
         SimpleDateFormat dateFormat = new SimpleDateFormat(DATE_FORMAT);
         dateFormat.setTimeZone(TimeZone.getTimeZone("UTC"));
         Date today = Calendar.getInstance().getTime();
-        DateContainer datecContainer = new DateContainer(today);
-        System.out.println("----" + datecContainer);
 
         String strdateParse1 = dateFormat.format(today);
         System.out.println("=======================Date to String: " + strdateParse1);
-        //String strdateParse2 = dateFormat.format(today);
-        try {
-            Date strdateParse2 = dateFormat.parse(strdateParse1);
-            System.out.println("====================String to Date: " + strdateParse2);
-        } catch (ParseException e) {
-            e.printStackTrace();
-        }
-
-//        String strDate = "2013-05-15T10:00:00-0700";
-//        SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm'Z'");
-//        Date date = dateFormat.parse(strDate);
+//        //String strdateParse2 = dateFormat.format(today);
 //        try {
-//            java.util.Date dateParse = sdfDateWithTime.parse(datecContainer.toString());
-//            System.out.println(dateParse);
+//            Date strdateParse2 = dateFormat.parse(strdateParse1);
+//            System.out.println("====================String to Date: " + strdateParse2);
 //        } catch (ParseException e) {
 //            e.printStackTrace();
 //        }

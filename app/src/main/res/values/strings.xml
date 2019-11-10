@@ -2,7 +2,7 @@
     <string name="app_name">Androidfinal_aptech_api</string>
     <string name="newInvoice">New Invoice</string>
     <string name="search">Search</string>
-    <string name="inputSearch">Input to search</string>
+    <string name="inputSearch">Keyword</string>
     <string name="name_Label">Name: </string>
     <string name="status_Label">Status: </string>
     <string name="payment_Label">Payment: </string>
@@ -16,4 +16,6 @@
     <string name="delete">Delete</string>
     <string name="detailScreen">Detail Invoice</string>
     <string name="mainScreen">Dashboard</string>
+    <string name="datePicker">Pick a Date</string>
+    <string name="refresh">Refresh</string>
 </resources>

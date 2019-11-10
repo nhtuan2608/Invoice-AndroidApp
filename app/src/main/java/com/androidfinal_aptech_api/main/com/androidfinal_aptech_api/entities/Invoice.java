@@ -1,6 +1,4 @@
 package com.androidfinal_aptech_api.main.com.androidfinal_aptech_api.entities;
-
-import com.androidfinal_aptech_api.main.com.androidfinal_aptech_api.adapter.DateContainer;
 import com.google.gson.annotations.SerializedName;
 
 import java.io.Serializable;

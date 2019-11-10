@@ -9,26 +9,60 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="128dp"
+        android:layout_height="150dp"
         android:orientation="horizontal">
 
-        <EditText
-            android:id="@+id/editTextSearch"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:ems="10"
-            android:focusable="false"
-            android:hint="@string/inputSearch"
-            android:inputType="textPersonName" />
+        <RadioGroup
+            android:id="@+id/radioGroup"
+            android:layout_width="123dp"
+            android:layout_height="137dp">
 
-        <Button
-            android:id="@+id/button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="@string/search" />
+            <RadioButton
+                android:id="@+id/radioButtonSpinner"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:checked="true" />
 
+            <RadioButton
+                android:id="@+id/radioButtonDate"
+                android:layout_width="match_parent"
+                android:layout_height="48dp" />
+
+            <Button
+                android:id="@+id/btnRefresh"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/refresh" />
+        </RadioGroup>
+
+        <LinearLayout
+            android:layout_width="233dp"
+            android:layout_height="136dp"
+            android:orientation="vertical">
+
+
+            <Spinner
+                android:id="@+id/spinnerStatus"
+                android:layout_width="233dp"
+                android:layout_height="47dp"
+                android:layout_weight="1" />
+
+            <EditText
+                android:id="@+id/editTextDatePicker"
+                android:layout_width="235dp"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:focusable="false"
+                android:hint="@string/datePicker" />
+
+            <Button
+                android:id="@+id/btnSearch"
+                android:layout_width="130dp"
+                android:layout_height="36dp"
+                android:layout_weight="1"
+                android:text="@string/search" />
+
+        </LinearLayout>
     </LinearLayout>
 
     <LinearLayout
@@ -40,7 +74,7 @@
         <ListView
             android:id="@+id/listViewMain"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="9dp"
             android:layout_weight="1"
             android:focusable="true" />
     </LinearLayout>

@@ -6,6 +6,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.TextView;
+import org.springframework.data.mongodb.core.mapping.Document;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -40,7 +41,7 @@ public class InvoiceAdapter extends ArrayAdapter<Invoice> {
             viewHolder.textViewStatus = view.findViewById(R.id.textViewStatus);
             viewHolder.textViewCreatedDate = view.findViewById(R.id.textViewCreatedDate);
         } else {
-            viewHolder = (InvoiceAdapter.ViewHolder) view.getTag();
+            viewHolder = (ViewHolder) view.getTag();
         }
 
         Invoice invoice = invoices.get(position);
@@ -52,10 +53,7 @@ public class InvoiceAdapter extends ArrayAdapter<Invoice> {
         return view;
     }
 
-    private class ViewHolder {
-        TextView textViewName;
-        TextView textViewPayment;
-        TextView textViewStatus;
-        TextView textViewCreatedDate;
+    public static class ViewHolder {
+        public static TextView textViewName ,textViewPayment, textViewStatus, textViewCreatedDate;
     }
 }
